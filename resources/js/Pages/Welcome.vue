@@ -1,7 +1,8 @@
 <script setup>
 import {Head, Link} from '@inertiajs/inertia-vue3';
-import Pano from "@/Components/Pano";
 import {ref} from "vue";
+import PanoImage from "@/Components/PanoImage";
+import PanoVideo from "@/Components/PanoVideo";
 
 defineProps({
     canLogin: Boolean,
@@ -58,7 +59,7 @@ const toggle = ref('image')
 
                         <div>
                             <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm" :class="[toggle === 'video' ? 'bg-white' : '']">
-                                <pano v-if="toggle === 'image'" source="/360/images/img.png" type="image"/>
+                                <pano-image v-if="toggle === 'image'" source="/360/images/img.png" type="image"/>
                                 <img v-else src="/images/panorama/img.png"
                                      class="h-80 w-full"/>
                             </div>
@@ -82,7 +83,7 @@ const toggle = ref('image')
 
                         <div>
                             <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm" :class="[toggle === 'image' ? 'bg-white' : '']">
-                                <pano v-if="toggle === 'video'" source="/360/videos/Panolens.js panorama video.mp4" type="video"/>
+                                <pano-video v-if="toggle === 'video'" source="/360/videos/Panolens.js panorama video.mp4" type="video"/>
                                 <img v-else src="/images/panorama/img.png"
                                      class="h-80 w-full"/>
                             </div>

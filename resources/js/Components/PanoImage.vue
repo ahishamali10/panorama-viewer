@@ -1,15 +1,15 @@
 <template>
     <div class="w-full h-80">
-        <div id="pano-v" class="w-full h-full"></div>
+        <div id="pano-i" class="w-full h-full"></div>
     </div>
 </template>
 
 <script>
 import * as PANOLENS from "panolens"
-import {onMounted} from "vue";
+import {onMounted, onUnmounted} from "vue";
 
 export default {
-    name: "Pano",
+    name: "PanoImage",
 
     props: {
         type: {
@@ -21,16 +21,18 @@ export default {
 
     setup(props) {
         onMounted(() => {
-            let panorama
-            if (props.type === 'video')
-                panorama = new PANOLENS.VideoPanorama(props.source);
-            else
-                panorama = new PANOLENS.ImagePanorama(props.source);
+            const panorama = new PANOLENS.ImagePanorama(props.source);
+            let container = document.querySelector('#pano-i');
+            container.innerHTML = ''
             const viewer = new PANOLENS.Viewer({
-                container: document.querySelector('#pano-v'),
+                container: container,
                 cameraFov: 100
             });
             viewer.add(panorama);
+        })
+
+        onUnmounted(() => {
+
         })
     }
 }
