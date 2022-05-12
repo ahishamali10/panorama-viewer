@@ -21,7 +21,7 @@ export default {
 
     setup(props) {
         onMounted(() => {
-            const panorama = new PANOLENS.VideoPanorama(props.source);
+            const panorama = new PANOLENS.ImagePanorama(props.source);
             let container = document.querySelector('#pano-v');
             container.innerHTML = ''
             const viewer = new PANOLENS.Viewer({

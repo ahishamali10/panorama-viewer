@@ -52,14 +52,14 @@ const toggle = ref('image')
                             </svg>
                             <div class="ml-4 text-lg leading-7 font-semibold">
                                 <span @click="toggle = 'image'" class="cursor-pointer underline text-gray-900 dark:text-white">
-                                    Image Panorama
+                                    Image 1 Panorama
                                 </span>
                             </div>
                         </div>
 
                         <div>
                             <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm" :class="[toggle === 'video' ? 'bg-white' : '']">
-                                <pano-image v-if="toggle === 'image'" source="/360/images/img.png" type="image"/>
+                                <pano-image v-if="toggle === 'image'" source="/360/images/test1.jpg" type="image"/>
                                 <img v-else src="/images/panorama/img.png"
                                      class="h-80 w-full"/>
                             </div>
@@ -76,14 +76,14 @@ const toggle = ref('image')
                             </svg>
                             <div class="ml-4 text-lg leading-7 font-semibold">
                                 <span @click="toggle = 'video'" class="cursor-pointer underline text-gray-900 dark:text-white">
-                                    Video Panorama
+                                    Image 2 Panorama
                                 </span>
                             </div>
                         </div>
 
                         <div>
                             <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm" :class="[toggle === 'image' ? 'bg-white' : '']">
-                                <pano-video v-if="toggle === 'video'" source="/360/videos/Panolens.js panorama video.mp4" type="video"/>
+                                <pano-video v-if="toggle === 'video'" source="/360/images/test2.jpg" type="image"/>
                                 <img v-else src="/images/panorama/img.png"
                                      class="h-80 w-full"/>
                             </div>
