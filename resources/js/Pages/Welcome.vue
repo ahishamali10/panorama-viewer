@@ -59,7 +59,7 @@ const toggle = ref('image')
 
                         <div>
                             <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm" :class="[toggle === 'video' ? 'bg-white' : '']">
-                                <pano-image number="1" source="/360/images/test1.jpg" type="image"/>
+                                <pano-image number="1" source="/360/images/test3.jpg" type="image"/>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@ const toggle = ref('image')
 
                         <div>
                             <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm" :class="[toggle === 'image' ? 'bg-white' : '']">
-                                <pano-image number="2" source="/360/images/test2.jpg" type="image"/>
+                                <pano-image number="2" source="/360/images/test4.jpg" type="image"/>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ const toggle = ref('image')
 
                         <div>
                             <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm" :class="[toggle === 'video' ? 'bg-white' : '']">
-                                <pano-image source="/360/images/test3.jpg" number="3" type="image"/>
+                                <pano-image source="/360/images/test1.jpg" number="3" type="image"/>
                             </div>
                         </div>
                     </div>
@@ -125,7 +125,7 @@ const toggle = ref('image')
 
                         <div>
                             <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm" :class="[toggle === 'image' ? 'bg-white' : '']">
-                                <pano-image number="4" source="/360/images/test4.jpg" type="image"/>
+                                <pano-image number="4" source="/360/images/test2.jpg" type="image"/>
                             </div>
                         </div>
                     </div>
@@ -134,7 +134,7 @@ const toggle = ref('image')
 
             <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
                 <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                    Prodigy Systems
+                    {{ (new Date()).getFullYear() }} &copy; Prodigy Systems
                 </div>
             </div>
         </div>
